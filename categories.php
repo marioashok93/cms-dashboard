@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 	
@@ -19,7 +21,7 @@
 <h1>Ajay</h1>
 
 
-<ul class="nav nav-pills nav-stacked">
+<ul class="nav nav-pills nav-stacked" id="sideBar">
 	
 
 <li><a href="dashboard.php">Dashboard</a></li>
@@ -30,9 +32,9 @@
 
 <li class="active"><a href="categories.php">Categories</a></li>
 
-<li><a href="#">Logout</a></li>
+<li><a href="#">Comments</a></li>
 
-<li><a href="#">Logout</a></li>
+<li><a href="#">Live Blog</a></li>
 
 <li><a href="#">Logout</a></li>
 

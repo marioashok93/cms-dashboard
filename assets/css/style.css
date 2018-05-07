@@ -1,0 +1,26 @@
+body{
+
+	background: #4867AA;
+
+
+}
+
+.col-sm-10{
+
+	background-color: white;
+}
+
+.col-sm-2 li a{
+
+	color:white;
+}
+
+.col-sm-2 li :hover{
+
+	font-weight: bold;
+
+	color:red;
+}
+
+ 
+
