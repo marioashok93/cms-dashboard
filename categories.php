@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,6 +50,31 @@
 <div class="col-sm-10">
 	
 <h4>Add a Category</h4>
+
+<div>
+	
+
+<form action="categories.php" method="post">
+	
+
+
+<div class="form-group">
+	
+<input type="text" name="login-username" placeholder="Enter the name" class="form-control">
+
+
+
+
+</div>
+
+
+<button type="submit" class="btn-success btn-block" name="login-button">Add a Category</button>
+
+</form>
+
+<br>
+
+</div>
  
 
 
