@@ -1,3 +1,11 @@
+<?php include('includes/db.php');
+
+include('includes/sessions.php');
+
+ ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,8 +55,19 @@
 
 
 <div class="col-sm-10">
+
+<div>
+	
+
+	
+	<?php echo message();  ?>
+
+	<?php echo successmessage(); ?>
+
+</div>
 	
 <h4>About us</h4>
+
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ipsum quo dolore praesentium ipsa deleniti id, error architecto, quos illo perspiciatis hic. Deleniti architecto exercitationem, facilis repellat autem ipsam, voluptas?</p>
 
 <h4>About us</h4>

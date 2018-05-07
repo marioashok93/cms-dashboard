@@ -1,3 +1,47 @@
+<?php include('includes/db.php');
+
+include('includes/sessions.php');
+
+?>
+
+
+
+
+<?php
+
+if(isset($_POST['login-button']))
+{
+
+	$login = $_POST['login-username'];
+
+	date_default_timezone_set('Asia/Kolkata');
+
+	$time = time();
+
+	$timeKeeper = strftime("%B-%Y-%s %H:%M:%S",$time);
+
+	if(empty($login))
+	{
+		$_SESSION['errorMessage']= "Name field cannot be empty";
+
+		header("Location:dashboard.php");
+	}else if(strlen($login)>4)
+	{
+		$_SESSION['errorMessage']= "Name field is too long";
+
+		header("Location:dashboard.php");
+
+	}
+
+
+}
+
+ ?>
+ 
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,8 +92,17 @@
 
 
 <div class="col-sm-10">
-	
+
+<br>
+<br>
+ 
 <h4>Add a Category</h4>
+
+
+
+<div>
+  
+</div>
 
 <div>
 	
@@ -62,7 +115,11 @@
 	
 <input type="text" name="login-username" placeholder="Enter the name" class="form-control">
 
+<div>
+	
 
+	 
+</div>
 
 
 </div>
