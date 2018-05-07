@@ -23,7 +23,7 @@ function successmessage()
 {
 	if(isset($_SESSION['serrorMessage'])){
 
-		$output = "<div class='alert alert-danger'>"; 
+		$output = "<div class='alert alert-success'>"; 
 
  $output.= htmlentities($_SESSION['serrorMessage']);
 

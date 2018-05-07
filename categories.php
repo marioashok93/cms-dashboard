@@ -20,16 +20,44 @@ if(isset($_POST['login-button']))
 
 	$timeKeeper = strftime("%B-%Y-%s %H:%M:%S",$time);
 
+	$admin = "Mario AJ";
+
 	if(empty($login))
 	{
 		$_SESSION['errorMessage']= "Name field cannot be empty";
 
 		header("Location:dashboard.php");
-	}else if(strlen($login)>4)
+	}else if(strlen($login)>99)
 	{
 		$_SESSION['errorMessage']= "Name field is too long";
 
 		header("Location:dashboard.php");
+
+	}else{
+
+     
+
+    $query = "INSERT INTO category(date_time,name,creator_name) VALUES('$timeKeeper','$login','$admin')";
+
+    $execute = mysqli_query($con,$query);
+
+    if($execute)
+    {
+    	$_SESSION['serrorMessage']= "Category Added successfully";
+
+    	header("Location:dashboard.php");
+
+
+
+    }else{
+    
+    $_SESSION['errorMessage']= "Category failed to add";
+
+		header("Location:dashboard.php");
+
+
+    }
+
 
 	}
 
