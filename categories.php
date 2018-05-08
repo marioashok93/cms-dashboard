@@ -18,7 +18,7 @@ if(isset($_POST['login-button']))
 
 	$time = time();
 
-	$timeKeeper = strftime("%B-%Y-%s %H:%M:%S",$time);
+	$timeKeeper = strftime("%B-%Y-%m %H:%M:%S",$time);
 
 	$admin = "Mario AJ";
 
@@ -91,7 +91,7 @@ if(isset($_POST['login-button']))
 <div class="col-sm-2">
 	
 
-<h1>Ajay</h1>
+ 
 
 
 <ul class="nav nav-pills nav-stacked" id="sideBar">
@@ -160,23 +160,110 @@ if(isset($_POST['login-button']))
 <br>
 
 </div>
+
+
+<div> 
+	
+<div class="table-responsive">	
+<table class="table table-striped">
+	
+
+<tr>
+	
+
+<th>S.No</th>
+<th>Date Time</th>
+<th>Category Name</th>
+<th>Creator Name</th>
+
+
+</tr>
+
+
+<?php
+
+
+$ViewQuery = 'SELECT * FROM category ORDER BY date_time desc';
+
+$Execute = mysqli_query($con,$ViewQuery);
+
+$SrNo = 0;
+
+while($Datarows = mysqli_fetch_array($Execute))
+{
+
+
+  $id = $Datarows['id'];
+
+  $dateTime = $Datarows['date_time'];
+
+  $name = $Datarows['name'];
+
+  $creatorName = $Datarows['creator_name'];
+
+  $SrNo++;
+
+
+
+
+
+
+
+
+
+
+?>
+
+<tr>
+	
+
+	<td><?php echo $SrNo; ?></td>
+
+	<td><?php echo $dateTime; ?></td>
+
+	<td><?php echo $name; ?></td>
+
+	<td><?php echo $creatorName; ?></td>
+
+
+
+</tr>
+
+
+<?php } ?>
+</table>
+
+</div>
+
+
+
+
+
+</div>
+ 
+
  
 
 
 
-</div>
-
-
-
-</div>
-
-
-
 
 
 
 
 </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
 
 
 
