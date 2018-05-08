@@ -35,7 +35,7 @@ include('includes/sessions.php');
 <li class="active"><a href="dashboard.php">Dashboard</a></li>
 
 
-<li><a href="#">Add new Post</a></li>
+<li><a href="addnewpost.php">Add new Post</a></li>
 
 
 <li><a href="categories.php">Categories</a></li>

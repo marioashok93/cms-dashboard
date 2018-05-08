@@ -100,7 +100,7 @@ if(isset($_POST['login-button']))
 <li><a href="dashboard.php">Dashboard</a></li>
 
 
-<li><a href="#">Add new Post</a></li>
+<li><a href="addnewpost.php">Add new Post</a></li>
 
 
 <li class="active"><a href="categories.php">Categories</a></li>
